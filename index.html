@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <title>Bevásárló Lista</title>
+    <style>
+        .container{
+            max-width: 370px;
+        }
+        .termekek{
+            background-color: aqua;
+            margin-bottom: 5px;
+            display: flex;
+            padding: 5px;
+            color: red;
+            margin-right: 5px;
+            margin-left: 5px;
+        }
+        i{
+            cursor: pointer;
+            text-align: right;
+        }
+        .felso{
+            background-color: lightblue;
+        }
+        h3{
+            color: white;
+        }
+        .hozzaad{
+            border:1px solid white;
+            background-color: green;
+            color:white;
+        }
+ 
+    </style>
+</head>
+<body>
+    <div class="container">
+ 
+        <div class="felso mb-5 mt-3 rounded">
+            <div class="row justify-content-center mb-3">
+                <h6>Írd ide a bevásárlandó terméket:</h6>
+            </div>
+            <div class="row justify-content-center mb-3">
+                <input type="text" class="mb-3" placeholder="Termék" id="termek">
+                <input type="text" placeholder="Mennyiség" id="mennyiseg">
+            </div>
+            <div class="row justify-content-center mb-3">
+                <input type="button" onclick="add()" class="hozzaad btn mb-3" value="Hozzáad">
+            </div>
+        </div>
+ 
+        <div class="also mb-5 rounded bg-success">
+            <div class="row  justify-content-center mb-3">
+                <h3>Termékek</h3>
+            </div>
+            <div class="lista justify-content-center mb-3"></div>
+            <div class="row justify-content-center mb-3">
+                <input type="button" onclick="deletall()" class="btn btn-danger justify-content-center mb-3" value="Összes törlése">
+            </div>
+        </div>
+    </div>
+ 
+    <script src="adatok.js"></script>
+</body>
+</html>
